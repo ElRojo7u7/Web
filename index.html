@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Boostrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel="stylesheet" href="dependecias/css/estilos.css">
+    <!-- Font Awesome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- Cubo css-->
+    <link rel="stylesheet" href="dependecias/cubo/cubo.css">
+    <!--Icon tab-->
+    <link rel="icon" href="dependecias/images/foxHd.png">
+    <title>Portafolio</title>
+    <style id="css-js">
+      #principal::after{
+        content: ""; display: block;
+        width: 0%;
+        height: 4px;
+        background-color: #fff;
+        transition: width 300ms;
+        position: absolute;
+        left: -1px;
+        top: 100%;
+      }
+      #principal::before{
+        content: ""; display: block;
+        width: 0%;
+        height: 4px;
+        background-color: #fff;
+        transition: width 300ms;
+        position: absolute;
+        right: -1px;
+        bottom: 100%;
+      }
+    </style>
+  </head>
+  <body>
+      <!-- Nav -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top invisible">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active steem-keychain-checked tamano" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link steem-keychain-checked tamano" href="#seccion-2">Mis conocimientos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link steem-keychain-checked tamano" href="#seccion-3">Acerca de mí</a>
+              </li>
+              <!--
+              <li class="nav-item">
+                <a class="nav-link steem-keychain-checked" href="#seccion-3">Seccion-3</a>
+              </li>
+            -->
+            </ul>
+          </div>
+          <a class="navbar-brand steem-keychain-checked">Diego Abraján</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- Seccion 1-->
+      <section class="parallax" id="seccion-1">
+          <center>
+            <div id="principal">
+              <h3>
+                Programador web<br><br>
+                <h4>Crea una página web dinámica completa con las tecnologías más recientes</h4>
+              </h3>
+            </div>
+          </center>
+      </section>
+      <!-- Seccion 2-->
+      <section class="parallax" id="seccion-2">
+        <div class="parallax separador bg-info" id="cabecera">
+          <br>
+          <center>
+            <h1 class="text-shadow">Mis conocimientos</h1>
+          </center>
+        </div>
+        <img src="dependecias/images/aux.png" alt="Intenta mover el cubo!!" id="aux">
+        <div id="contenedor">
+            <div id="contain" draggable="false">
+              <div id="cubo" draggable="false">
+                  <div draggable="false"></div>
+                  <div draggable="false"></div>
+                  <div draggable="false"></div>
+                  <div draggable="false"></div>
+                  <div draggable="false"></div>
+                  <div draggable="false"></div>
+              </div>
+            </div>
+          <div id="shadow"></div>
+          <img src="" alt="Estrellas moviendose" id="estrellas" disabled>
+        </div>
+        <div id="terminal">
+          <div id="window" class="invisible">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span class="invisible"></span>
+          </div> <div id = "arrow" class="ter-text"><span></span><span></span><span></span></div>
+          <p id="alineado"><span class="ter-text" id="ubuntu">Diego@ubuntu:<span>~$ <span class="invisible">hi</span></span></span><span id="mucho-texto" class="invisible"></span></p>
+        </div>
+        <div id="extras">
+
+        </div>
+      </section>
+
+      <!-- Seccion 3-->
+      <section class="parallax" id="seccion-3">
+          <div id="about" class="pb-1">
+            <p><img src="dependecias/images/formal.png" alt="Foto de mi" class="mt-1">
+              Hola, mi nombre es Diego Horacio Galaviz Abraján tengo 19 años, soy estudiante de ing. en computación
+              de la UNAM (fes aragón). Actualmente estoy en segundo semestre, estoy interesado en postularme a una 
+              vacante de desarrollo web donde se hagan uso de las tecnologías que sé implementar: <br>
+              <ul class="logo">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS, JQuery</li>
+                <li>PHP, Laravel</li>
+                <li>Boostrap</li>
+              </ul>
+              La experiencia que tengo es realizando proyectos personales (como este portafolio dinámico)
+              donde realizo prácticas usando las tecnologías antes mencionadas.<br>
+              Espero poder trabajar a medio tiempo de ser posible para poder cumplir con mis actividades
+              académicas y laborales en su totalidad
+            </p>
+            <div id="enlaces">
+              <a class="prevent" href="">
+                <i class="fab fa-whatsapp-square fa-3x icono" onclick="whatsReveal()"></i>
+              </a> <p id="numero">5532167224</p>
+              <div id="revelar" class="mb-2">
+                <a href="" class="prevent">
+                  <i class="fas fa-envelope fa-3x icono" id="mail-open" onclick="mailReveal()"></i>
+                </a> <span id="mail">diegoabrajan52@aragon.unam.mx</span>
+                <div id="revelar2">
+                  <a href="https://www.facebook.com/diego7.abrajan/" target="_blank">
+                    <i class="fab fa-facebook-square fa-3x icono"></i>
+                  </a>
+                  <!--
+                  <a href="" target="_blank">
+                    <i class="fab fa-instagram-square fa-3x icono"></i>-->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- Footer -->
+      <footer class="parallax" id="footer">
+        <center>
+          <p id="foot-text">Desarrollado por Diego G.A</p>
+        </center>
+      </footer>
+    <!-- Scripts -->
+    <!-- Boostrap y popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- jQery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Typed -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <!-- Scroll reveal ewe -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Cubo -->
+    <script src="dependecias/cubo/pvta bida.js"></script>
+    <!-- Main -->
+    <script src="dependecias/js/main.js"></script>
+  </body>
+</html>

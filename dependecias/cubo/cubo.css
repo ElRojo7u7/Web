@@ -1,0 +1,70 @@
+#contain{
+    width: 200px;
+    perspective: 1000px;
+    margin: 100px auto;
+}
+#cubo{
+    position: relative;
+    width: 200px; height: 200px;
+    transform-style: preserve-3d;
+    transform: rotateX(-45deg) rotateY(45deg);
+    transition: transform 1ms;
+}
+#contain div div{
+    position: absolute;
+    background: gray;
+    width: 200px; height: 200px;
+    border-color: rgb(231, 218, 28);
+    border-width: 3px;
+    border-style: solid;
+}
+/*CSS 3*/
+#contain div div:nth-child(1){
+    transform: translateZ(100px);
+    background: url(images/css3.png) center /200px no-repeat;
+    /* Entorno de pruebas, azul
+    background-color: darkblue;
+    */
+}/*JS*/
+#contain div div:nth-child(2){
+    transform: rotateX(180deg) translateZ(100px) rotateZ(180deg);
+    background: url(images/js.png) center /200px no-repeat;
+    /* Entorno de pruebas: auzl
+    background-color: darkcyan;
+    */
+}/*HTML 5*/
+#contain div div:nth-child(3){
+    transform: rotateY(-90deg) translateZ(100px);
+    background: url(images/html5.png) center /200px no-repeat;
+    /* Entorno de pruebas: rojo
+    background: darkred;
+    */
+}/*MY SQL*/
+#contain div div:nth-child(4){
+    transform: rotateY(90deg) translateZ(100px);
+    background: url(images/mysql.jpg) center /200px no-repeat;
+    /* Entorno de pruebas: verde
+    background: darkolivegreen;
+    */
+}/*PHP*/
+#contain div div:nth-child(5){
+    transform: rotateX(90deg) translateZ(100px);
+    background: url(images/php.png) center /200px no-repeat;
+    /* Entorno de pruebas: rosa
+    background: magenta;
+    */
+}/*Boostrap*/
+#contain div div:nth-child(6){
+    transform: rotateX(-90deg) translateZ(100px);
+    background: url(images/bootstrap.png) center /200px no-repeat;
+    /* Entorno de pruebas gris
+    color: darkturquoise;
+    */
+}
+#shadow{
+    width: 135px; height: 20px;
+    transform: translateY(55px) translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0px -50px 15px rgba(0, 0, 0, 0.541);
+    left: 50%; margin-left: 50%;
+}

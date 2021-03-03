@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cubo prueba</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <style>
+            #contain{
+                width: 500px;
+                perspective: 700px;
+                margin: 100px auto;
+            }
+            #cubo{
+                position: relative;
+                width: 150px; height: 150px;
+                transform-style: preserve-3d;
+                transform: rotateX(-45deg) rotateY(45deg);
+                transition: transform 1ms;
+            }
+            #contain div div{
+                position: absolute;
+                background: gray;
+                width: 150px; height: 150px;
+                border-color: rgb(231, 218, 28);
+                border-width: 3px;
+                border-style: solid;
+            }
+            #contain div div:nth-child(1){
+                transform: translateZ(75px);
+                background-color: darkblue;
+            }
+            #contain div div:nth-child(2){
+                transform: rotateX(180deg) translateZ(75px);
+                background-color: darkcyan;
+            }
+            #contain div div:nth-child(3){
+                transform: rotateY(-90deg) translateZ(75px);
+                background: darkred;
+            }
+            #contain div div:nth-child(4){
+                transform: rotateY(90deg) translateZ(75px);
+                background: darkolivegreen;
+            }
+            #contain div div:nth-child(5){
+                transform: rotateX(90deg) translateZ(75px);
+                background: magenta;
+            }
+            #contain div div:nth-child(6){
+                transform: rotateX(-90deg) translateZ(75px);
+                color: darkturquoise;
+            }
+            #shadow{
+                width: 100px; height: 20px;
+                transform: translateY(40px);
+                border-radius: 50%;
+                box-shadow: 0px -50px 15px rgba(0, 0, 0, 0.541);
+            }
+        </style>
+        <body>
+            <center>
+                <div id="contain" draggable="false">
+                    <div id="cubo" draggable="false">
+                        <div draggable="false">
+                            <img src="" alt="" draggable="false">
+                        </div>
+                        <div draggable="false">
+                            <img src="" alt="" draggable="false">
+                        </div>
+                        <div draggable="false">
+                            <img src="" alt="" draggable="false">
+                        </div>
+                        <div draggable="false">
+                            <img src="" alt="" draggable="false">
+                        </div>
+                        <div draggable="false">
+                            <img src="" alt="" draggable="false">
+                        </div>
+                        <div draggable="false">
+                            <img src="" alt="" draggable="false">
+                        </div>
+                    </div>
+                </div>
+                <div id="shadow"></div>
+            </center>
+        </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js" integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw==" crossorigin="anonymous"></script>
+        <script src="pvta bida.js"></script>
+        <script>
+            var motor = new Motor($("#cubo"), $("#shadow"));
+        </script>
+    </head>
+</html>
